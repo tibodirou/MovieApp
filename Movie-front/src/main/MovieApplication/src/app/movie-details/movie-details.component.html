@@ -1,0 +1,49 @@
+
+
+<div class="container">
+
+    <div class = "left-container">
+        {{movie?.summary}}
+        
+    </div>
+
+    <div class="middle-container">  
+        <div class="top-container"> {{movie?.title}} </div>
+
+
+        <vg-player class="videoPlayer">
+
+
+            <vg-controls>
+                <vg-play-pause></vg-play-pause>
+                <vg-playback-button></vg-playback-button>
+        
+                <vg-scrub-bar style="pointer-events: none;"></vg-scrub-bar>
+        
+        
+                <vg-track-selector></vg-track-selector>
+                <vg-mute></vg-mute>
+                <vg-volume></vg-volume>
+        
+                <vg-fullscreen></vg-fullscreen>
+            </vg-controls>
+
+            <video #media [vgMedia]="$any(media)" id="singleVideo" preload="auto" controls>
+                <source src="../../assets/videos/00005.mp4" type="video/mp4">
+
+                <track kind="subtitles" label="English" src="http://static.videogular.com/assets/subs/pale-blue-dot.vtt" srclang="en" default>
+
+            </video>
+        </vg-player>
+
+        <div class="bottom-container">{{movie?.genres}}</div>
+
+    </div>
+      
+    <div class="right-container">
+
+    </div>
+</div>
+
+
+

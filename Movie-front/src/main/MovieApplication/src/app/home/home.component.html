@@ -1,0 +1,29 @@
+
+<button (click)= "fillDB()"  mat-raised-button color="primary">get Movies !</button>
+
+<div class="container">
+
+    <mat-card class="card" (click)= "goToMovieDetails(movie.id)" [ngStyle]= "{'background-image': 'url(' + movie.thumbnail + ')', 'background-size':'cover'}" *ngFor= "let movie of movies">
+        <div class="overlay">
+            <div class="score">
+                <p class="scoreText">{{movie.score}}</p>
+                <p>{{genre[0]}}</p>
+                <img class= "star" src="../../assets/icons/star.png" alt="">
+            </div>
+        </div>
+    </mat-card>
+
+    
+<!--
+    <mat-card class="card" [ngStyle]= "{'background-image': 'url(' + img + ')', 'background-size':'cover'}">
+        <div class="overlay">
+        <div class="score">
+            <p class="scoreText">{{score}}</p>
+            <p>{{genre[0]}}</p>
+            <img src="../../assets/icons/star.png" alt="">
+        </div>
+    </div>
+        
+    </mat-card>
+-->
+</div>
