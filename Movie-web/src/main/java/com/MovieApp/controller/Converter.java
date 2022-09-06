@@ -13,7 +13,6 @@ public class Converter {
 		MovieDTO movieDTO = new MovieDTO();
 		movieDTO.setId(movie.getId());
 		movieDTO.setTitle(movie.getTitle());
-		
 		movieDTO.setSummary(movie.getSummary());
 		movieDTO.setLanguage(movie.getLanguage());
 		movieDTO.setSubtitle(movie.getSubtitle());
@@ -21,7 +20,6 @@ public class Converter {
 		movieDTO.setVideo(movie.getVideo());
 		movieDTO.setThumbnail(movie.getThumbnail());
 		movieDTO.setScore(movie.getScore());
-		
 		movieDTO.setDirector(movie.getDirector().getName());
 		movieDTO.setGenres(movie.getGenre().stream().map(Genre::getName).collect(Collectors.toList()));
 		
